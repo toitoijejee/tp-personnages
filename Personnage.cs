@@ -11,15 +11,16 @@ public class Personnage
         this.pointsDeVie = pointsDeVie;
     }
 
-    public void RecevoirDegats(int degats)
+    public virtual void RecevoirDegats(int degats)
     {
         pointsDeVie -= degats;
         if (pointsDeVie < 0)
             pointsDeVie = 0;
     }
 
-    public void Afficher()
+    public virtual void Afficher()
     {
         Console.WriteLine($"Nom: {nom}, Points de vie: {pointsDeVie}");
     }
 }
+

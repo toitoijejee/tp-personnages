@@ -1,16 +1,18 @@
-using System;
+﻿using System;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // Création d'un personnage
-        Personnage p = new Personnage("Arthur", 100);
-        // Affichage des informations
-        p.Afficher();
-        // Le personnage subit des dégâts
-        p.RecevoirDegats(30);
-        // Affichage après dégâts
-        p.Afficher();
+        Guerrier g = new Guerrier("Conan", 120, 10);
+        g.Afficher();
+        g.RecevoirDegats(30);
+        g.Afficher();
+
+        Console.WriteLine();
+
+        Magicien m = new Magicien("Gandalf", 80, 50);
+        m.Afficher();
+        m.LancerSort();
     }
 }
