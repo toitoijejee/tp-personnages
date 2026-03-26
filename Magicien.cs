@@ -4,18 +4,19 @@ public class Magicien : Personnage
 {
     protected int puissanceMagique;
 
-    public Magicien(string nom, int pointsDeVie, int puissanceMagique) : base(nom, pointsDeVie)
+    public Magicien(string nom, int PV, int puissanceMagique) : base(nom, PV)
     {
         this.puissanceMagique = puissanceMagique;
     }
-
+    
     public override void Afficher()
     {
-        Console.WriteLine($"Magicien - Nom: {nom}, Points de vie: {pointsDeVie}, Puissance Magique: {puissanceMagique}");
+        Console.WriteLine($"Magicien: {nom}, PV: {pointsDeVie}, Puissance Magique: {puissanceMagique}");
     }
 
     public void LancerSort()
     {
-        Console.WriteLine($"{nom} lance un sort avec une puissance de {puissanceMagique} !");
+        Console.WriteLine($"Le magicien lance un sort");
     }
 }
+

@@ -4,7 +4,7 @@ public class Guerrier : Personnage
 {
     protected int armure;
 
-    public Guerrier(string nom, int pointsDeVie, int armure) : base(nom, pointsDeVie)
+    public Guerrier(string nom, int PV, int armure) : base(nom, PV)
     {
         this.armure = armure;
     }
@@ -18,6 +18,11 @@ public class Guerrier : Personnage
 
     public override void Afficher()
     {
-        Console.WriteLine($"Guerrier - Nom: {nom}, Points de vie: {pointsDeVie}, Armure: {armure}");
+        Console.WriteLine($"Guerrier: {nom}, PV: {pointsDeVie}, Armure: {armure}");
+    }
+
+    public void Attaquer()
+    {
+        Console.WriteLine($"Le guerrier attaque");
     }
 }
